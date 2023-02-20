@@ -1,11 +1,14 @@
 from tkinter import *
+from random import choice
+colors=['red', 'green', 'blue','pink','gray', 'black','yellow','red','white','purple','gold']
+
 root = Tk()
 root.geometry('500x300')
-b1=Button(root,text='Крыша', width='15', height='-30', )
+b1=Button(root,text='Крыша', width='15', height='-30', command=lambda: root.configure(bg=choice(colors)))
 b1.pack()
-b2=Button(root,text='основание', width='15', height='-45',)
+b2=Button(root,text='основание', width='15', height='-45',command=lambda: root.configure(bg=choice(colors)))
 b2.pack()
-b3=Button(root, text="солнце", width='15',height='-60',)
+b3=Button(root, text="солнце", width='15',height='-60',command=lambda: root.configure(bg=choice(colors)))
 b3.pack()
 c = Canvas(root, width=200, height=200, bg='white')
 c.pack()
